@@ -25,7 +25,7 @@ grattan_slider <- function(variable, title, subtitle, default = 1){
 }
 
 
-# UI ----
+######## UI ----
 ui <- fluidPage(
   
   chooseSliderSkin("Flat", color = "#F68B33"),
@@ -220,7 +220,7 @@ server <- function(input, output) {
       labs(y = "Difference from Australia",
            title = "Which countries are most like Australia?",
            subtitle = "Similarity to Australia based on weighted criteria\n(lower value means more similar)",
-           caption = "Notes: Similarity measured using weighted Euclidean distance on metrics standardised using z-scores.\nSource: OECD Stat and Grattan analysis")
+           caption = "Note: Similarity measured using weighted Euclidean distance on metrics standardised using z-scores.\nSources: OECD Stat and Grattan analysis.")
       
     # need to tinker with the grobs to properly left-align the plot title
     g <- ggplotGrob(p)
